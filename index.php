@@ -23,7 +23,7 @@ ifconnected();
                 <div class="tacheinput">
                     <form action="">
                         <input id="input" type="text" placeholder="Ajouter une tache" >
-                        <div>
+                        <div class="divbouton">
                             <button class="box-button" id="bouton">valider</button>
                             <button class="box-button" id="supp" >supprimer</button>
                         </div>

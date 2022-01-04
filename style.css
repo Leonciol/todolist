@@ -24,6 +24,7 @@ a{
     text-decoration: none;
     color: White;
     margin: 5px;
+    padding: 5px;
 }
 a:hover{
     color: rgb(9,161,218);
@@ -31,12 +32,13 @@ a:hover{
 }
 
 .box-button{
+    align-items: center;
+    text-align: center;
     width: 60px;
     height: 30px;
     border-radius: 10px;
     background-color: #E3051B;
     border: 1px;
-    margin: 10px;
     font-size: 12px;
 }
 .box-button:hover{
@@ -90,4 +92,16 @@ navbar{
 }
 #input{
     width: 100%;
+}
+
+.box-button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+
+}
+.divbouton{
+    display: flex;
+    justify-content: space-around;
 }

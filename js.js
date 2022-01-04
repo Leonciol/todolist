@@ -5,22 +5,24 @@ var supp = document.querySelector('#supp')
 var numero_tache = 0;
 
 
-
-//creaction d'une tache
+//creation d'une tache et vérification si le champs n'est pas vide
 function createtache(whereadd){
-    let labels = document.createElement('label');
-    labels.classList.add(numero_tache)
-    labels.innerHTML = input.value
+    if(input.value !==''){
+        let labels = document.createElement('label');
+        labels.classList.add(numero_tache)
+        labels.innerHTML = input.value
 
 
-    let checkbox = document.createElement('input');
-    checkbox.type ='checkbox'
-    checkbox.setAttribute('id',numero_tache)
-    numero_tache++
-    labels.appendChild(checkbox)
-    whereadd.appendChild(labels)
+        let checkbox = document.createElement('input');
+        checkbox.type ='checkbox'
+        checkbox.setAttribute('id',numero_tache)
+        numero_tache++
+        labels.appendChild(checkbox)
+        whereadd.appendChild(labels)
 
+    }
 }
+
 //bouton creation de taches
 bouton.addEventListener('click', (e)=>{
         e.preventDefault();
@@ -30,7 +32,7 @@ bouton.addEventListener('click', (e)=>{
 
 )
 
-//Suppression des taches
+//Bouton Suppression de tache
 supp.addEventListener('click',(event)=>{
     event.preventDefault()
     let tachesselect = document.querySelectorAll("input[type='checkbox']:checked" )
@@ -39,5 +41,5 @@ supp.addEventListener('click',(event)=>{
         let lbl = cb.parentNode;
         let content = document.getElementById("tachecontent");
         content.removeChild(lbl);
-     }
+    }
 })

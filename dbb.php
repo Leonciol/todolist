@@ -3,7 +3,7 @@
 const DB_SERVER= 'localhost';
 const DB_USERNAME= 'root';
 const DB_PASSWORD= 'oui';
-const DB_NAME= 'plub';
+const DB_NAME= 'todolist';
 
 $db = null;
 // Connexion à la base de données MySQL

@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    font-family: "Roboto Condensed";
+    zoom: 110%;
+
+}
+
+
+navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: White;
+    margin: 5px;
+}
+a:hover{
+    color: rgb(9,161,218);
+    transition: 0.3s;
+}
+
+.box-button{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #E3051B;
+    border: 1px;
+    margin: 10px;
+    font-size: 12px;
+}
+.box-button:hover{
+    background-color: rgba(227,5,27,0.7);
+    transition: 0.3s;
+}
+.tachecontainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    margin-left:auto ;
+    margin-right: auto;
+    width: 40%;
+    height: 40%;
+    margin-top: 5%;
+    background-color: rgb(0,91,125);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0,0,0.4);
+    padding: 20px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input{
+    margin: 5px;
+    border-radius: 3px;
+    border: 2px black solid;
+    padding: 10px;
+}
+input::placeholder{
+    text-align: center;
+
+}
+
+#tachecontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#task{
+    margin: 10px;
+}
+navbar{
+    background-color: rgb(0,91,125);
+}
+#input{
+    width: 100%;
+}

@@ -2,13 +2,12 @@
 include 'dbb.php';
 include 'function.php';
 
-if (!empty($_POST['email'])&& !empty($_POST['nom'])&& !empty($_POST['prenom'])&& !empty($_POST['pseudo'])&& !empty($_POST['password'])){
+if (!empty($_POST['email'])&& !empty($_POST['nom'])&& !empty($_POST['prenom'])&& !empty($_POST['password'])){
 
 
     $email=str_secur($_POST['email']);
     $nom=str_secur($_POST['nom']);
     $prenom=str_secur($_POST['prenom']);
-    $pseudo=str_secur($_POST['pseudo']);
     $password=str_secur($_POST['password']);
     $regex = "/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z]).{6,13}$/";
 
@@ -34,8 +33,8 @@ if (!empty($_POST['email'])&& !empty($_POST['nom'])&& !empty($_POST['prenom'])&&
         }
         else{
             var_dump($db);
-            $reqInsert=$db->prepare('INSERT INTO utilisateur(email,nom,prenom,pseudo,password) VALUE(?,?,?,?,?)');
-            $reqInsert->execute([$email,$nom,$prenom,$pseudo,$password]);
+            $reqInsert=$db->prepare('INSERT INTO utilisateur(email,nom,prenom,password) VALUE(?,?,?,?)');
+            $reqInsert->execute([$email,$nom,$prenom,$password]);
 
             header('Location: login.php?succes=1&message=Inscription Effectué');
             exit;
@@ -58,7 +57,6 @@ if (!empty($_POST['email'])&& !empty($_POST['nom'])&& !empty($_POST['prenom'])&&
     <input type="email" class="box-input" name="email" placeholder="Adresse email" required />
     <input type="text" class="box-input" name="nom" placeholder="nom" required />
     <input type="text" class="box-input" name="prenom" placeholder="prenom" required />
-    <input type="text" class="box-input" name="pseudo" placeholder="pseudo" required />
     <input type="password" class="box-input" name="password" placeholder="Mot de passe" required />
     <input type="submit" name="submit" value="S'inscrire" class="box-button" />
     <p class="box-register">Déjà inscrit? <a href="connection.php">Connectez-vous ici</a></p>
